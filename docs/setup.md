@@ -59,4 +59,12 @@
 
     1. [slf4j-simple-2.0.1.jar](https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/2.0.1/).
 
-1. 
+1. In VS Code, open the Terminal by typing ``CTRL+` ``.
+
+1. Under the `Terminal` tab, type `./gradlew genSources`. To view the output, click on the `Output` tab in the bottom pane.
+
+    <img style="width:70%; height:70%" src="resources/vs_code_terminal_intro.png">
+
+    This process should take several minutes, so check back at a later time.
+
+    As of right now, multiple unresolved problems will show up under the `Problems` tab. I will post an update once I have resolved these errors.
