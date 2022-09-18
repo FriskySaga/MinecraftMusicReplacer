@@ -36,21 +36,22 @@
 
 1. Press `CTRL+B` to toggle the left sidepane. Press `CTRL+SHIFT+X` to see your extensions. Press `CTRL+SHIFT+E` to return to your Project Explorer.
 
-1. Create a new folder by clicking the button shown below.
-
-    <img style="width:30%; height:30%" src="resources/vs_code_how_to_create_a_folder.png">
-
-    Name the folder: `.vscode`.
-
-1. Right-click on the newly created `.vscode` folder and add a new file called `settings.json`.
-
-1. Copy the following code into your `settings.json`:
+1. Press `CTRL+P` to search for a file. Type in `code-workspace` to open up your workspace file. Copy the following code:
+    
     ```json
     {
-        "java.project.referencedLibraries": [
-            "D:\\Focus\\SoftwareEngineering\\Apps\\Minecraft\\MinecraftMusicReplacer\\lib\\slf4j-api-2.0.1.jar",
-            "D:\\Focus\\SoftwareEngineering\\Apps\\Minecraft\\MinecraftMusicReplacer\\lib\\slf4j-simple-2.0.1.jar"
-        ]
+        "folders": [
+            {
+                "path": "."
+            }
+        ],
+        "settings": {
+            "java.configuration.updateBuildConfiguration": "automatic",
+            "java.project.referencedLibraries": [
+                "D:\\Focus\\SoftwareEngineering\\Apps\\Minecraft\\MinecraftMusicReplacer\\lib\\slf4j-api-2.0.1.jar",
+                "D:\\Focus\\SoftwareEngineering\\Apps\\Minecraft\\MinecraftMusicReplacer\\lib\\slf4j-simple-2.0.1.jar"
+            ]
+        }
     }
     ```
     
