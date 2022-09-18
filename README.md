@@ -1,4 +1,5 @@
 # MinecraftMusicReplacer
+For setup, see [setup.md](docs/setup.md).
 
 # Fabric Example Mod
 
