@@ -1,5 +1,5 @@
 # Setup
-[Click here for video instruction](https://www.youtube.com/watch?v=Xts41xvfjfs). For text instruction, proceed onwards with this guide. 
+[Click here for video instruction until 13:04](https://www.youtube.com/watch?v=Xts41xvfjfs). For text instruction, proceed onwards with this guide. 
 
 1. Download the [Windows x64 .msi file](https://adoptium.net/temurin/releases/).
 
