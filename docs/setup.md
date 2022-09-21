@@ -36,7 +36,7 @@
 
       4. On the left-hand navigation pane, expand `Editor`, and select `Font`.
 
-         1. One suggestion is to set the font size to 20.0 and line height to 1.2 for the JetBrains Mono font.
+         1. One suggestion is to set the font size to 24.0 and line height to 1.2 for the JetBrains Mono font.
 
       5. On the left-hand navigation pane, expand `Build, Execution, Deployment`, expand `Build Tools`, and select `Gradle`.
          
