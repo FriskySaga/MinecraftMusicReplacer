@@ -1,3 +1,8 @@
 {
-  "modid.bleach": "Bleach"
+  "modid.bleach": "Bleach",
+
+  "itemGroup.modid.musical": "Musical Tutorial Tab",
+
+  "item.modid.musical_boots": "Musical Boots",
+  "item.modid.musical_rock": "Musical Rock"
 }
