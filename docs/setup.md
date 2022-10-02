@@ -38,21 +38,27 @@
 
          1. One suggestion is to set the font size to 24.0 and line height to 1.2 for the JetBrains Mono font.
 
-      5. On the left-hand navigation pane, expand `Build, Execution, Deployment`, expand `Build Tools`, and select `Gradle`.
+			5. On the left-hand navigation pane, select `Inlay Hints` underneath the `Editor` group.
+
+					1. Expand `Code Vision` and de-select `Usages`. Keep this option selected if you want to see how many times a particular variable or function is used.
+
+			6. On the left-hand navigation pane, select `Editor` > `Natural Languages` > `Grammar and Style` and deselect the checkbox next to `English` to disable spell-checking.
+
+      7. On the left-hand navigation pane, expand `Build, Execution, Deployment`, expand `Build Tools`, and select `Gradle`.
          
          1. Match these settings:
          
          <img style="width:55%; height:55%" src="resources/gradle_projects_settings.png">
    
-      6. Wait for this message to appear below: `BUILD SUCCESSFUL`.
+4. Wait for this message to appear below: `BUILD SUCCESSFUL`.
       
-         1. If this message does not appear, (1) click on `Gradle` on the right-hand navigation pane, and (2) click the `Reload All Gradle Projects` button.
+		 1. If this message does not appear, (1) click on `Gradle` on the right-hand navigation pane, and (2) click the `Reload All Gradle Projects` button.
 
          <img style="width:35%; height:35%" src="resources/reload_all_gradle_projects.png">
 
-4. Open the `Terminal` tab below and type in: `./gradlew genSources`. Wait up to 5 minutes for the message `BUILD SUCCESSFUL` to appear.
+5. Open the `Terminal` tab below and type in: `./gradlew genSources`. Wait up to 5 minutes for the message `BUILD SUCCESSFUL` to appear.
    
-5. On the left navigation pane under the `Projects` tab, scroll down to expand `External Libraries`.
+6. On the left navigation pane under the `Projects` tab, scroll down to expand `External Libraries`.
    
    1. Scroll down to expand `Gradle: net.minecraft:minecraft-project`.
          
@@ -66,6 +72,7 @@
    
          The file should reload automatically, and the banner should disappear.
    
-6. On the right-hand navigation pane, select the `Gradle` tab.
+7. On the right-hand navigation pane, select the `Gradle` tab.
 
    1. Expand `Tasks` > `fabric`. Then double-click `runClient`. A Minecraft launcher should pop up several minutes afterwards.
+
