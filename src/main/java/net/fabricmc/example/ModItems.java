@@ -14,9 +14,9 @@ public class ModItems extends Items {
             registerItem("musical_rock",
                          new Item(new FabricItemSettings().group(ModItemGroup.MUSICAL)));
 
-    public static final Item MUSICAL_BOOTS =
-            registerItem("musical_boots",
-                         new MusicalBoots());
+    public static final Item MUSIC_DISC_GALETAER =
+            registerItem("music_disc_galetaer",
+                         new MusicDiscGaletaer());
 
     protected static Item registerItem(String name, Item item) {
         Identifier id = new Identifier(ExampleMod.MOD_ID, name);
