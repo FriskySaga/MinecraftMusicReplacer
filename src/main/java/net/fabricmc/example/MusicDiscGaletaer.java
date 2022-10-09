@@ -13,6 +13,8 @@ import net.minecraft.world.biome.Biome;
 import java.util.Optional;
 
 public class MusicDiscGaletaer extends Item {
+    private static String playingMusicForBiome = "";
+
     public MusicDiscGaletaer() {
         super(new FabricItemSettings().group(ModItemGroup.MUSICAL));
     }
@@ -36,7 +38,13 @@ public class MusicDiscGaletaer extends Item {
         Optional<RegistryKey<Biome>> biomeKey = world.getBiomeAccess().getBiome(entity.getSteppingPos()).getKey();
         if (biomeKey.isPresent())
         {
-            ExampleMod.LOGGER.info("Biome Value: " + biomeKey.get().getValue().toString());
+            final String currentBiome = biomeKey.get().getValue().toString().split(":")[1];
+
+            if (currentBiome != playingMusicForBiome)
+            {
+                playingMusicForBiome = currentBiome;
+                ExampleMod.LOGGER.info("Playing music for biome: " + playingMusicForBiome);
+            }
         }
     }
 
