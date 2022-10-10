@@ -13,7 +13,7 @@ import net.minecraft.world.biome.Biome;
 import java.util.Optional;
 
 public class MusicDiscGaletaer extends Item {
-    private static String playingMusicForBiome = "";
+    private String playingMusicForBiome = "";
 
     public MusicDiscGaletaer() {
         super(new FabricItemSettings().group(ModItemGroup.MUSICAL));
