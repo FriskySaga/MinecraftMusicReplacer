@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tutorialmod:item/musical_rock"
+    "layer0": "modid:item/musical_rock"
   }
 }

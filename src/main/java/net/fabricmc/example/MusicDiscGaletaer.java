@@ -1,15 +1,15 @@
 package net.fabricmc.example;
 
-// minecraft imports
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 
-// java imports
 import java.util.Optional;
 
 public class MusicDiscGaletaer extends Item {
@@ -35,15 +35,19 @@ public class MusicDiscGaletaer extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         super.inventoryTick(stack, world, entity, slot, selected);
 
-        Optional<RegistryKey<Biome>> biomeKey = world.getBiomeAccess().getBiome(entity.getSteppingPos()).getKey();
-        if (biomeKey.isPresent())
-        {
+        final BlockPos playerPos = entity.getSteppingPos();
+
+        Optional<RegistryKey<Biome>> biomeKey = world.getBiomeAccess().getBiome(playerPos).getKey();
+
+        if (biomeKey.isPresent()) {
             final String currentBiome = biomeKey.get().getValue().toString().split(":")[1];
 
-            if (currentBiome != playingMusicForBiome)
-            {
+            if (!currentBiome.equals(playingMusicForBiome)) {
                 playingMusicForBiome = currentBiome;
                 ExampleMod.LOGGER.info("Playing music for biome: " + playingMusicForBiome);
+                world.playSound(playerPos.getX(), playerPos.getY(), playerPos.getZ(),
+                                ModSoundEvents.BLEACH, SoundCategory.MUSIC,
+                                1f, 1f, false);
             }
         }
     }
